@@ -10,7 +10,6 @@ Feature: Dynamic Tables
       | Quantity | Product | Price $ | Total $ |
 
     And the user should see the table with the rows below
-
       | 1 | iPhone  | 1,000 | 1,000 |
       | 3 | Airpods | 100   | 300   |
       | 2 | iPad    | 500   | 1,000 |
@@ -36,3 +35,16 @@ Feature: Dynamic Tables
     Then the user should see the “Add New Product” modal with its heading
     When the user clicks on the “X” button
     Then the user should not see the “Add New Product” modal
+
+
+  Scenario: Test Case 04 - Validate the new product added
+    When the user clicks on the “ADD PRODUCT” button
+    And the user enters the quantity as “2”
+    And the user enters the product as “Mouse”
+    And the user enters the price as “100”
+    And the user clicks on the “SUBMIT” button
+    Then the user should see the table with the new row below
+
+      | 2 | Mouse | 100 | 200 |
+
+    And the user should see the “Total = $2,500” text displayed
