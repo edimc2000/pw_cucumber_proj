@@ -1,4 +1,4 @@
-name: SmartBear Tests
+name: Cucumber Sample Dynamic Tables Tests
 on:
   push:
     branches: [ main, master ]
