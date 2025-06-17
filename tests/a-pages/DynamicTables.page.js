@@ -10,6 +10,7 @@ export class DynamicTablesPage {
 
     // locators modal
     this.getTextModalTitle = this.page.locator('#modal_title')
+    
 
   }
 
