@@ -38,10 +38,10 @@ When(/^the user clicks on the “([^”]+)” button$/, async function (buttonNa
     buttonName === 'X'
         ? await this.page.locator('[aria-label="close"]').click()
         : await this.page.getByRole('button', { name: buttonName }).click()
+        
 });
 
 Then(/^the user should see the “([^”]+)” modal with its heading$/, async function (modalTitle) {
-    console.log('Modal Title: ', await this.dynamicTablesPage.getTextModalTitle.innerText()) // debugging 
     expect(await this.dynamicTablesPage.getTextModalTitle.innerText()).toBe(modalTitle)
 });
 
@@ -58,3 +58,25 @@ Then(/^the user should see the “([^”]+)” input box is enabled$/, async fun
 Then(`the user should not see the “Add New Product” modal`, async function () {
     expect.soft(await this.dynamicTablesPage.getTextModalTitle).not.toBeAttached()
 });
+
+
+
+Then(`the user enters the quantity as “{int}”`, async function(quantity) {
+    await this.dynamicTablesPage.getFieldQuantity.fill(`${quantity}`)
+});
+
+Then(/^the user enters the product as “([^”]+)”$/, async function(product) {
+    await this.dynamicTablesPage.getFieldProduct.fill(`${product}`)
+});
+
+Then(`the user enters the price as “{int}”`, async function(price) {
+    await this.dynamicTablesPage.getFieldPrice.fill(`${price}`) 
+});
+
+
+Then(`the user should see the table with the new row below`, async function(DataTable) {
+    const expectedValues = DataTable.rawTable[0]
+    const actualValues =  await this.dynamicTablesPage.getRowLast.allInnerTexts()
+    expect(actualValues.join('').replace(/\s+/g, ',')).toBe(expectedValues.join(','))
+});
+

@@ -5,6 +5,7 @@
   "scripts": {
     "test": "npx cucumber-js",
     "test:smoke": "npx cucumber-js --tags \"@Smoke\"",
+    "only": "npx cucumber-js --tags @Only",
     "test:regression": "npx cucumber-js --tags \"@Regression\""
   },
   "author": "",

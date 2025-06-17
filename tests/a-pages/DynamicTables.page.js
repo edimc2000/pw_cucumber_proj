@@ -7,9 +7,13 @@ export class DynamicTablesPage {
     this.getTableHeaders = this.page.locator('th')
     this.getTableContent = this.page.locator('tbody tr')
     this.getTextTotalAmount = this.page.locator('#total_amount')
-
+    this.getRowLast = this.page.locator('tbody tr:last-child')
+    
     // locators modal
     this.getTextModalTitle = this.page.locator('#modal_title')
+    this.getFieldQuantity = this.page.locator('#quantity')
+    this.getFieldProduct = this.page.locator('#product')
+    this.getFieldPrice = this.page.locator('#price')
     
 
   }

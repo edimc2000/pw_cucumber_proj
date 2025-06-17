@@ -29,14 +29,13 @@ Feature: Dynamic Tables
     And the user should see the “Price” input box is enabled
     And the user should see the “SUBMIT” button is enabled
 
-
   Scenario: Test Case 03 - Validate the Add New Product modal X button
     When the user clicks on the “ADD PRODUCT” button
     Then the user should see the “Add New Product” modal with its heading
     When the user clicks on the “X” button
     Then the user should not see the “Add New Product” modal
 
-
+@Only
   Scenario: Test Case 04 - Validate the new product added
     When the user clicks on the “ADD PRODUCT” button
     And the user enters the quantity as “2”
