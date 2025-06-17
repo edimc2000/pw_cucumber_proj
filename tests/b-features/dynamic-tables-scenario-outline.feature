@@ -4,6 +4,7 @@ Feature: Dynamic Tables - with scenario outlines
   Background:
     Given the user is on "https://techglobal-training.com/frontend/dynamic-tables/"
 
+  
   Scenario: Test Case 01 - Validate the default content of the inventory table
     Then the user should see the “Inventory” heading
     And the user should see the table with the headers below

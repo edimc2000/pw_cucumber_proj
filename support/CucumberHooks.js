@@ -28,4 +28,5 @@ After(async function() {
 
 AfterAll(async function() {
   await this.browser?.close();
+  process.exit()
 });
