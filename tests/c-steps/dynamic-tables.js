@@ -40,7 +40,9 @@ Then(/^the user should see the “Total = \$([\d,]+)” text displayed$/, async 
 
 
 When(/^the user clicks on the “([^”]+)” button$/, async function (buttonName) {
-    await this.dynamicTablesPage.getButtonAddProduct.click()
+    buttonName === 'X'
+        ? await this.page.locator('[aria-label="close"]').click()
+        : await this.page.getByRole('button', { name: buttonName }).click()
 });
 
 
