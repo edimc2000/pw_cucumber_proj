@@ -38,7 +38,6 @@ When(/^the user clicks on the “([^”]+)” button$/, async function (buttonNa
     buttonName === 'X'
         ? await this.page.locator('[aria-label="close"]').click()
         : await this.page.getByRole('button', { name: buttonName }).click()
-        
 });
 
 Then(/^the user should see the “([^”]+)” modal with its heading$/, async function (modalTitle) {
