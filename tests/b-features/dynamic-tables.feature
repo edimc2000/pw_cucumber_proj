@@ -35,7 +35,6 @@ Feature: Dynamic Tables
     When the user clicks on the “X” button
     Then the user should not see the “Add New Product” modal
 
-@Only
   Scenario: Test Case 04 - Validate the new product added
     When the user clicks on the “ADD PRODUCT” button
     And the user enters the quantity as “2”
