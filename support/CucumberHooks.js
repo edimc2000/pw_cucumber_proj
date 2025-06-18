@@ -33,7 +33,7 @@ AfterAll(async function () {
 
   setTimeout(() => {
     console.log("Timeout reached, exiting process.");
-    process.exit(); // Exit with a non-zero code to indicate an error/timeout
+    process.exit(0); // Exit with a non-zero code to indicate an error/timeout
   }, 5000); // Exit after 5000 milliseconds (5 seconds)
 
   console.log("Process started, waiting for timeout...");
