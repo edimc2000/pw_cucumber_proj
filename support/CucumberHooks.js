@@ -8,7 +8,7 @@ setDefaultTimeout(60000);
 
 BeforeAll(async function() {
   global.browser = await chromium.launch({
-    headless: process.env.CI ? true : false,
+    headless: process.env.CI ? true : false, 
   });
 });
 
@@ -28,5 +28,5 @@ After(async function() {
 
 AfterAll(async function() {
   await this.browser?.close();
-  process.exit()
+  // process.exit()
 });
