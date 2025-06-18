@@ -1,3 +1,5 @@
+
+runs-on: self-hosted
 name: Cucumber Sample Dynamic Tables Tests
 on:
   push:
@@ -25,7 +27,7 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Cucumber Tests
       run: npm test
-    - uses: deblockt/cucumber-report-annotations-action@v1.7
+    - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
         name: report
