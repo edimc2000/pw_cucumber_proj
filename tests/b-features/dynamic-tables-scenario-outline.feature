@@ -47,7 +47,6 @@ Feature: Dynamic Tables - with scenario outlines
     And the user enters the price as “100”
     And the user clicks on the “SUBMIT” button
     Then the user should see the table with the new row below
-
       | 2 | Mouse | 100 | 200 |
 
     And the user should see the “Total = $2,500” text displayed
