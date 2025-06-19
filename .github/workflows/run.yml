@@ -10,7 +10,7 @@ on:
 jobs:
   main:
     timeout-minutes: 60
-    runs-on: [cores]
+    runs-on: [lesscores]
     # runs-on: windows-latest
 
     env:
