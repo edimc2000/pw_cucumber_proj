@@ -76,6 +76,6 @@ Then(`the user enters the price as “{int}”`, async function(price) {
 Then(`the user should see the table with the new row below`, async function(DataTable) {
     const expectedValues = DataTable.rawTable[0]
     const actualValues =  await this.dynamicTablesPage.getRowLast.allInnerTexts()
-    expect(actualValues.join('').replace(/\s+/g, ',')).toBe(expectedValues.join(','))
+    expect(actualValues.join('').replace(/\s+/g, '')).toBe(expectedValues.join(''))
 });
 
