@@ -1,7 +1,5 @@
 # 🧪 Cucumber + Playwright Test Automation Framework
 
-![CI](https://github.com/edimc2000/pw_cucumber_proj/actions/workflows/test.yml/badge.svg)
-
 A modern, scalable end-to-end testing framework using [Cucumber.js](https://github.com/cucumber/cucumber-js) and [Playwright](https://playwright.dev/), based on the Page Object Model (POM) pattern.
 
 ---
