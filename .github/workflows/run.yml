@@ -10,7 +10,7 @@ on:
 jobs:
   main:
     timeout-minutes: 60
-    runs-on: [self-hosted, cores]
+    runs-on: [self-hosted, cores, lesscores]
     env:
       baseURL: ${{ vars.BASEURL }}
       loginURL: ${{ vars.LOGINURL }}
