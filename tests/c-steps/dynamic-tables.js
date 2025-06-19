@@ -29,9 +29,9 @@ Then(/^the user should see the “([^”]+)” button is enabled$/, async functi
 });
 
 Then(/^the user should see the “Total = \$([\d,]+)” text displayed$/, async function (expectedAmount) {
-    const pageDisplayTotal = await this.dynamicTablesPage.getTextTotalAmount.innerText()
-    const expectedDisplayAmount = expectedAmount
-    expect(pageDisplayTotal.slice(9)).toBe(expectedDisplayAmount)
+    const pageDisplayTotal = await this.dynamicTablesPage.getTextTotalAmount
+    const expectedDisplayAmount = `Total = $${expectedAmount}`
+    await expect(await pageDisplayTotal).toHaveText(expectedDisplayAmount)
 });
 
 When(/^the user clicks on the “([^”]+)” button$/, async function (buttonName) {
